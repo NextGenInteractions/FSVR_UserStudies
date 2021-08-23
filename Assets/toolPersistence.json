@@ -1,0 +1,78 @@
+{
+  "Mannequin": {
+    "Left Arm": {
+      "DeviceUid": "LHB-FA9108A8",
+      "DeviceDisplayName": "Lamp1"
+    }
+  },
+  "Wristcuff": {
+    "Touchpad": {
+      "DeviceUid": "WristcuffArduBoard\r",
+      "DeviceDisplayName": "Wristcuff V5 Touchpad"
+    },
+    "Tracked Device with Buttons": {
+      "DeviceUid": "LHR-2A47A89A",
+      "DeviceDisplayName": "Wristcuff V5"
+    }
+  },
+  "SnapHand Right": {
+    "Hand": {
+      "DeviceUid": "Leap Motion Right Hand",
+      "DeviceDisplayName": "Righty"
+    }
+  },
+  "SnapHand Left": {
+    "Hand": {
+      "DeviceUid": "Leap Motion Left Hand",
+      "DeviceDisplayName": "Lefty"
+    }
+  },
+  "Flashlight": {
+    "Tracked Device with Trigger Button and Grip Button": {
+      "DeviceUid": "LHR-288EF2BB",
+      "DeviceDisplayName": "Flashlight"
+    }
+  },
+  "MultiRae": {
+    "Tracked Device with Menu, Trigger, Grip Buttons": {
+      "DeviceUid": "LHR-8F4BB25F",
+      "DeviceDisplayName": "MultiRae Backup"
+    }
+  },
+  "Backscatter": {
+    "Backscatter": {
+      "DeviceUid": "LHR-6D84C83D",
+      "DeviceDisplayName": "Backscatter"
+    }
+  },
+  "Cocaine Brick": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-32CF9F9C",
+      "DeviceDisplayName": "Cocaine Brick"
+    }
+  },
+  "PlayerLogic - Hazmat": {
+    "Tracked Device": {
+      "DeviceUid": "1PASH5D1P17365",
+      "DeviceDisplayName": "Quest 2"
+    }
+  },
+  "ViveHMD": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-F9308780",
+      "DeviceDisplayName": "Index HMD"
+    }
+  },
+  "Paintbrush": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-8F4BB25F",
+      "DeviceDisplayName": "MultiRae Backup"
+    }
+  },
+  "MultiRae_Puck": {
+    "Tracked Device with Menu, Trigger, Grip Buttons": {
+      "DeviceUid": "LHR-92836352",
+      "DeviceDisplayName": "Lightsaber"
+    }
+  }
+}
