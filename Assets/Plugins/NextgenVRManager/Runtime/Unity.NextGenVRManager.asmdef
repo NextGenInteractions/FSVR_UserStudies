@@ -1,0 +1,22 @@
+{
+    "name": "NextGenVRManagerRuntime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bfac32c1d0231784bb24b8c23d8d1298",
+        "GUID:2ee0542102ac1084e8d9a910885c1e81",
+        "GUID:1fbf338ef6b952a448262a7ff7df5fe4",
+        "GUID:af5d38278583db04fae8eafabfc78ba6",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:35b9c7a103b322f43805bf1744257ac7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

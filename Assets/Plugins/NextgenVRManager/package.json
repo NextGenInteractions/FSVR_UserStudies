@@ -1,0 +1,13 @@
+{
+    "name": "com.nextgen.vrmanager",
+    "version": "1.0.0",
+    "displayName": "Next Gen VR Manager",
+    "description": "Next Gen internal manager for VR projects",
+    "unity": "2020.3",
+    "dependencies": {
+      "com.unity.inputsystem": "1.0.2",
+      "com.unity.render-pipelines.universal": "10.5.0",
+      "com.unity.textmeshpro": "3.0.4",
+      "com.valvesoftware.unity.openvr": "1.1.4"
+   }
+  }
