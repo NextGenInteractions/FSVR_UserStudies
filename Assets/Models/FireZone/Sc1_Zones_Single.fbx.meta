@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 8e408372490c03545980e2a58d9b7780
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Low
+    100002: Low 1
+    100004: Low 2
+    100006: Mid
+    100008: Mid 1
+    100010: Mid 2
+    100012: OrangeZone
+    100014: RedZone
+    100016: //RootNode
+    100018: Top
+    100020: Top 1
+    100022: Top 2
+    100024: YellowZone
+    400000: Low
+    400002: Low 1
+    400004: Low 2
+    400006: Mid
+    400008: Mid 1
+    400010: Mid 2
+    400012: OrangeZone
+    400014: RedZone
+    400016: //RootNode
+    400018: Top
+    400020: Top 1
+    400022: Top 2
+    400024: YellowZone
+    2100000: _UI_Zones
+    2300000: Low
+    2300002: Low 1
+    2300004: Low 2
+    2300006: Mid
+    2300008: Mid 1
+    2300010: Mid 2
+    2300012: Top
+    2300014: Top 1
+    2300016: Top 2
+    3300000: Low
+    3300002: Low 1
+    3300004: Low 2
+    3300006: Mid
+    3300008: Mid 1
+    3300010: Mid 2
+    3300012: Top
+    3300014: Top 1
+    3300016: Top 2
+    4300000: Top
+    4300002: Mid
+    4300004: Low
+    4300006: Top
+    4300008: Mid
+    4300010: Low
+    4300012: Top
+    4300014: Mid
+    4300016: Low
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _UI_Zones
+    second: {fileID: 2100000, guid: 0e6eb6f0f115bb24386416d83e765e51, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

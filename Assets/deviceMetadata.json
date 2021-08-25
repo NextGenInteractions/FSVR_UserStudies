@@ -213,5 +213,20 @@
     "Label": "Quest 2",
     "Type": 3,
     "Tags": []
+  },
+  "LHR-E323ACE2": {
+    "Label": "DocsIndex",
+    "Type": 4,
+    "Tags": []
+  },
+  "LHB-3CC7612E": {
+    "Label": "Lighthouse 1",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-B5B9627D": {
+    "Label": "Lighthouse 2",
+    "Type": 0,
+    "Tags": []
   }
 }
