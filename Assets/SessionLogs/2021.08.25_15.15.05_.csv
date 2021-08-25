@@ -1,0 +1,10 @@
+2021.08.25_15.15.05,0:00.0,System,Session '' started.
+2021.08.25_15.15.05,0:00.0,System,Timer created: Time To Move To
+2021.08.25_15.15.05,0:00.0,System,Timer created: ObjectiveTimer
+2021.08.25_15.18.20,3:14.6,System,Session interrupted -- ending session...
+2021.08.25_15.18.20,3:14.6,System,Session ended.
+Final Values:
+Tally 'Playspace Boundary': 0
+Tally 'Collision Event': 0
+Timer 'Time To Move To': 0:00.0
+Timer 'ObjectiveTimer': 0:00.0

@@ -228,5 +228,10 @@
     "Label": "Lighthouse 2",
     "Type": 0,
     "Tags": []
+  },
+  "LHR-F5D5BF5B": {
+    "Label": "Headset",
+    "Type": 3,
+    "Tags": []
   }
 }

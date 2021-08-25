@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8150363702312488619}
   - component: {fileID: 7265295542614503897}
   - component: {fileID: 3941514682044516529}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: InteractionIndicator_Destination_Collision
   m_TagString: Indicator
   m_Icon: {fileID: 0}
