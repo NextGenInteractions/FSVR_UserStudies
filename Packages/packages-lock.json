@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.nextgen.vrmanager": {
-      "version": "file:D:/Unity Projects/NextGenVRManager/Assets",
+      "version": "file:D:/NextGen Projects/GIT Projects/NextGenVRManager/Assets",
       "depth": 0,
       "source": "local",
       "dependencies": {

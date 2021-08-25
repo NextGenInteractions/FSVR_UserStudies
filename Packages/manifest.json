@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.nextgen.vrmanager": "file:D:/Unity Projects/NextGenVRManager/Assets",
+    "com.nextgen.vrmanager": "file:D:/NextGen Projects/GIT Projects/NextGenVRManager/Assets",
     "com.samdriver.driven-decals": "https://github.com/Anatta336/driven-decals.git",
     "com.unity.collab-proxy": "1.3.9",
     "com.unity.ide.rider": "2.0.7",
