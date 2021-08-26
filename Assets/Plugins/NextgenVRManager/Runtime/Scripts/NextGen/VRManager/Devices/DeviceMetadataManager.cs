@@ -41,7 +41,7 @@ namespace NextGen.VrManager.Devices
 
         public static void SetMetadata(string serialNumber, DeviceMetadata metadata)
         {
-            if(!DeviceMetadataMap.ContainsKey(serialNumber) || !DeviceMetadataMap[serialNumber].Equals(metadata))
+            if (!DeviceMetadataMap.ContainsKey(serialNumber) || !DeviceMetadataMap[serialNumber].Equals(metadata))
             {
                 DeviceMetadataMap[serialNumber] = metadata;
 
@@ -54,7 +54,7 @@ namespace NextGen.VrManager.Devices
         [RuntimeInitializeOnLoadMethod]
         private static void ReadMetadataFromFile()
         {
-            if(File.Exists(filePath))
+            if (File.Exists(filePath))
             {
                 string json;
                 using (StreamReader reader = new StreamReader(filePath))
@@ -67,7 +67,7 @@ namespace NextGen.VrManager.Devices
                 {
                     map = JsonConvert.DeserializeObject<IDictionary<string, DeviceMetadata>>(json);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Debug.LogError($"Invalid file format for file: {filePath}. Exception: {e.Message}");
                 }
@@ -79,7 +79,9 @@ namespace NextGen.VrManager.Devices
             }
             else
             {
-                Debug.LogError($"Could not read from file: {filePath}. File does not exist.");
+                Debug.LogError($"Could not read from file: {filePath}. File does not exist. Creating empty file now...");
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                    writer.Write("{\n}");
             }
         }
 
@@ -87,10 +89,10 @@ namespace NextGen.VrManager.Devices
         {
             try
             {
-                using StreamWriter writer = new StreamWriter(filePath, false);
-                writer.Write(JsonConvert.SerializeObject(DeviceMetadataMap, Formatting.Indented));
+                using (StreamWriter writer = new StreamWriter(filePath, false))
+                    writer.Write(JsonConvert.SerializeObject(DeviceMetadataMap, Formatting.Indented));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.LogError($"Failed to write metadata to file: {filePath}. Exception: {e}");
             }
@@ -104,7 +106,7 @@ namespace NextGen.VrManager.Devices
 
         private static void CheckForMetadata(Device d)
         {
-            if(d.Metadata == null)
+            if (d.Metadata == null)
             {
                 DialogManager.SetMetadataDialog(d);
             }

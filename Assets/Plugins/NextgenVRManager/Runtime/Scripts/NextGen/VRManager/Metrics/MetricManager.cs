@@ -111,9 +111,9 @@ public class MetricManager : MonoBehaviour
             timestamp--;
         }
 
-        int remainder = Mathf.FloorToInt(timestamp * 10);
+        int remainder = Mathf.FloorToInt(timestamp * 1000);
 
-        return $"{minutes}:{seconds:00}.{remainder}";
+        return $"{minutes}:{seconds:00}.{remainder:000}";
     }
 
     public static void LogEvent(string body, string type = "System")
@@ -124,7 +124,7 @@ public class MetricManager : MonoBehaviour
 
     public static void LogEvent(float timestamp, string type, string body)
     {
-        writer.WriteLine($"{DateTime.Now.ToString("yyyy.MM.dd_HH.mm.ss")},{TimeToMSD(timestamp)},{type},{body}");
+        writer.WriteLine($"{DateTime.Now.ToString("yyyy.MM.dd_HH.mm.ss")},{timestamp:0.000},{TimeToMSD(timestamp)},{type},{body}");
     }
 
     public static void WriteLine(string line)

@@ -1,237 +1,32 @@
 {
-  "COM4": {
-    "Label": "Serial",
-    "Type": 7,
-    "Tags": []
-  },
-  "LHR-BDE37E4F": {
-    "Label": "Magic Goggles",
+  "LHR-F9308780": {
+    "Label": "1",
     "Type": 3,
     "Tags": []
   },
-  "LHB-FA9108A8": {
-    "Label": "Lighthouse 2",
+  "LHB-7C4C49D2": {
+    "Label": "2",
     "Type": 0,
-    "Tags": []
-  },
-  "LHR-58CBAEC4": {
-    "Label": "Excalibur",
-    "Type": 1,
     "Tags": []
   },
   "LHB-C0AA30D5": {
-    "Label": "Lamp2",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHB-071BB9A8": {
-    "Label": "Lamp3",
+    "Label": "3",
     "Type": 0,
     "Tags": []
   },
   "LHB-D0584280": {
-    "Label": "Lamp5",
+    "Label": "4",
     "Type": 0,
     "Tags": []
   },
-  "Leap Motion Right Hand": {
-    "Label": "Righty",
-    "Type": 8,
-    "Tags": []
-  },
-  "Leap Motion Left Hand": {
-    "Label": "Lefty",
-    "Type": 8,
-    "Tags": []
-  },
-  "COM1": {
-    "Label": "com1",
-    "Type": 7,
-    "Tags": []
-  },
-  "LHR-0EA896F0": {
-    "Label": "headset",
-    "Type": 3,
-    "Tags": []
-  },
-  "LHR-4B8FCF80": {
-    "Label": "wandy",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHB-345C3B5D": {
-    "Label": "L4MP",
+  "LHB-071BB9A8": {
+    "Label": "5",
     "Type": 0,
-    "Tags": []
-  },
-  "LHR-92836352": {
-    "Label": "Lightsaber",
-    "Type": 1,
-    "Tags": []
-  },
-  "COM5": {
-    "Label": "Cereal Killer",
-    "Type": 7,
-    "Tags": []
-  },
-  "LHR-F9308780": {
-    "Label": "Index HMD",
-    "Type": 4,
-    "Tags": []
-  },
-  "LHR-652D9162": {
-    "Label": "Manny's Left Hand",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHR-62E43E85": {
-    "Label": "Manny's Head",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHR-141D678F": {
-    "Label": "Manny's Right Hand",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHR-7854ABC7": {
-    "Label": "Manny's Right Foot",
-    "Type": 5,
-    "Tags": []
-  },
-  "WristcuffArduBoard": {
-    "Label": "Wristcuff Touchpad",
-    "Type": 7,
-    "Tags": []
-  },
-  "LHR-2A47A89A": {
-    "Label": "Wristcuff V5",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHB-ED208E21": {
-    "Label": "Lighthouse 1",
-    "Type": 0,
-    "Tags": []
-  },
-  "WristcuffV5Board\r": {
-    "Label": "Wristcuff Touchpad V5",
-    "Type": 7,
-    "Tags": []
-  },
-  "LHR-37567F12": {
-    "Label": "SteamVR Wristcuff V6",
-    "Type": 2,
-    "Tags": []
-  },
-  "LHR-6E2938BC": {
-    "Label": "ohnono",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHB-04658131": {
-    "Label": "lampo",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHB-33745D3B": {
-    "Label": "l4mp",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHR-4D610358": {
-    "Label": "CONT-2(2)",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHR-A730A1D4": {
-    "Label": "CONT-1(1)",
-    "Type": 1,
-    "Tags": []
-  },
-  "WristcuffArduBoard\r": {
-    "Label": "Wristcuff V5 Touchpad",
-    "Type": 7,
     "Tags": []
   },
   "LHR-8523F705": {
-    "Label": "CONT-3(1)",
+    "Label": "6",
     "Type": 1,
-    "Tags": []
-  },
-  "LHR-288EF2BB": {
-    "Label": "Flashlight",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHR-527E2A07": {
-    "Label": "Puck MultiRAE",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHR-6D84C83D": {
-    "Label": "Backscatter",
-    "Type": 2,
-    "Tags": []
-  },
-  "LHR-32CF9F9C": {
-    "Label": "Cocaine Brick",
-    "Type": 5,
-    "Tags": []
-  },
-  "LHB-7C4C49D2": {
-    "Label": "Lighthouse",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHR-8832082B": {
-    "Label": "MultiRAE",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHR-920CC7E2": {
-    "Label": "Wand 1",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHB-6EFE5E83": {
-    "Label": "Lighthouse 3",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHR-AD4505F9": {
-    "Label": "Wand 2",
-    "Type": 1,
-    "Tags": []
-  },
-  "LHR-8F4BB25F": {
-    "Label": "MultiRae Backup",
-    "Type": 1,
-    "Tags": []
-  },
-  "1PASH5D1P17365": {
-    "Label": "Quest 2",
-    "Type": 3,
-    "Tags": []
-  },
-  "LHR-E323ACE2": {
-    "Label": "DocsIndex",
-    "Type": 4,
-    "Tags": []
-  },
-  "LHB-3CC7612E": {
-    "Label": "Lighthouse 1",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHB-B5B9627D": {
-    "Label": "Lighthouse 2",
-    "Type": 0,
-    "Tags": []
-  },
-  "LHR-F5D5BF5B": {
-    "Label": "Headset",
-    "Type": 3,
     "Tags": []
   }
 }

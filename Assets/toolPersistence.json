@@ -59,20 +59,44 @@
   },
   "ViveHMD": {
     "Tracked Device": {
-      "DeviceUid": "LHR-E323ACE2",
-      "DeviceDisplayName": "DocsIndex"
+      "DeviceUid": "LHR-F9308780",
+      "DeviceDisplayName": "Index HMD"
     }
   },
   "Paintbrush": {
     "Tracked Device": {
-      "DeviceUid": "LHR-8F4BB25F",
-      "DeviceDisplayName": "MultiRae Backup"
+      "DeviceUid": "LHR-8523F705",
+      "DeviceDisplayName": "OpenVR Controller(VIVE Controller Pro MV) - Right"
     }
   },
   "MultiRae_Puck": {
     "Tracked Device with Menu, Trigger, Grip Buttons": {
       "DeviceUid": "LHR-92836352",
       "DeviceDisplayName": "Lightsaber"
+    }
+  },
+  "PlayerLogic": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-F9308780",
+      "DeviceDisplayName": "OpenVR Headset(Index)"
+    }
+  },
+  "MultiRAEObject": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-AD4505F9",
+      "DeviceDisplayName": "Wand 2"
+    }
+  },
+  "MultiRAE_DigitalOnly": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-AD4505F9",
+      "DeviceDisplayName": "Wand 2"
+    }
+  },
+  "MultiRAE_Haptics": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-8832082B",
+      "DeviceDisplayName": "MultiRAE"
     }
   }
 }

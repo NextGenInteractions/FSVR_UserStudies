@@ -83,7 +83,9 @@ namespace NextGen.VrManager.ToolManagement
             }
             else
             {
-                Debug.LogError($"Could not read from file: {persistenceFilePath}. File does not exist.");
+                Debug.LogError($"Could not read from file: {persistenceFilePath}. File does not exist. Creating empty file now...");
+                using (StreamWriter writer = new StreamWriter(persistenceFilePath, false))
+                    writer.Write("{\n}");
             }
         }
 
