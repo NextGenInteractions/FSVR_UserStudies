@@ -28,5 +28,20 @@
     "Label": "6",
     "Type": 1,
     "Tags": []
+  },
+  "LHR-AD4505F9": {
+    "Label": "Wando",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-8832082B": {
+    "Label": "MultiRAE",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-54DB5DB7": {
+    "Label": "TablePuck",
+    "Type": 1,
+    "Tags": []
   }
 }

@@ -65,8 +65,8 @@
   },
   "Paintbrush": {
     "Tracked Device": {
-      "DeviceUid": "LHR-8523F705",
-      "DeviceDisplayName": "OpenVR Controller(VIVE Controller Pro MV) - Right"
+      "DeviceUid": "LHR-AD4505F9",
+      "DeviceDisplayName": "Wando"
     }
   },
   "MultiRae_Puck": {
@@ -78,7 +78,7 @@
   "PlayerLogic": {
     "Tracked Device": {
       "DeviceUid": "LHR-F9308780",
-      "DeviceDisplayName": "OpenVR Headset(Index)"
+      "DeviceDisplayName": "1"
     }
   },
   "MultiRAEObject": {
@@ -90,13 +90,19 @@
   "MultiRAE_DigitalOnly": {
     "Tracked Device": {
       "DeviceUid": "LHR-AD4505F9",
-      "DeviceDisplayName": "Wand 2"
+      "DeviceDisplayName": "Wando"
     }
   },
   "MultiRAE_Haptics": {
     "Tracked Device": {
-      "DeviceUid": "LHR-8832082B",
-      "DeviceDisplayName": "MultiRAE"
+      "DeviceUid": "LHR-AD4505F9",
+      "DeviceDisplayName": "Wando"
+    }
+  },
+  "Table": {
+    "Tracked Device": {
+      "DeviceUid": "LHR-54DB5DB7",
+      "DeviceDisplayName": "TablePuck"
     }
   }
 }
