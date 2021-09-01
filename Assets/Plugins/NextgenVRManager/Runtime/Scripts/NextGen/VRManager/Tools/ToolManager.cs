@@ -13,8 +13,10 @@ namespace NextGen.VrManager.ToolManagement
 
         public static Action<Tool> ToolAdded, ToolRemoved;
 
+        private static string persistenceBasePath { get { return $"{Application.dataPath}/StreamingAssets/NextGen"; } }
+
         private static readonly string persistenceFileName = "toolPersistence.json";
-        private static string persistenceFilePath { get { return $"{Application.dataPath}/{persistenceFileName}"; } }
+        private static string persistenceFilePath { get { return $"{persistenceBasePath}/{persistenceFileName}"; } }
 
         public static Dictionary<string, Dictionary<string, DeviceSlotEntry>> PersistenceMap = new Dictionary<string, Dictionary<string, DeviceSlotEntry>>();
 
@@ -84,6 +86,10 @@ namespace NextGen.VrManager.ToolManagement
             else
             {
                 Debug.LogError($"Could not read from file: {persistenceFilePath}. File does not exist. Creating empty file now...");
+
+                if (!Directory.Exists(persistenceBasePath))
+                    Directory.CreateDirectory(persistenceBasePath);
+
                 using (StreamWriter writer = new StreamWriter(persistenceFilePath, false))
                     writer.Write("{\n}");
             }
@@ -93,7 +99,7 @@ namespace NextGen.VrManager.ToolManagement
         {
             Dictionary<string, DeviceSlotEntry> toolEntry = new Dictionary<string, DeviceSlotEntry>();
 
-            foreach(KeyValuePair<string, Device> kvp in t.Devices)
+            foreach (KeyValuePair<string, Device> kvp in t.Devices)
             {
                 toolEntry[kvp.Key] = new DeviceSlotEntry(kvp.Value.Uid, kvp.Value.DisplayName);
             }

@@ -13,9 +13,9 @@ namespace NextGen.VrManager.Devices
     /// </summary>
     public static class DeviceMetadataManager
     {
+        private static string basePath { get { return $"{Application.dataPath}/StreamingAssets/NextGen"; } }
         private static readonly string fileName = "deviceMetadata.json";
-
-        private static string filePath { get { return $"{Application.dataPath}/{fileName}"; } }
+        private static string filePath { get { return $"{basePath}/{fileName}"; } }
 
         private static IDictionary<string, DeviceMetadata> DeviceMetadataMap = new Dictionary<string, DeviceMetadata>();
 
@@ -80,6 +80,10 @@ namespace NextGen.VrManager.Devices
             else
             {
                 Debug.LogError($"Could not read from file: {filePath}. File does not exist. Creating empty file now...");
+
+                if (!Directory.Exists(basePath))
+                    Directory.CreateDirectory(basePath);
+
                 using (StreamWriter writer = new StreamWriter(filePath, false))
                     writer.Write("{\n}");
             }

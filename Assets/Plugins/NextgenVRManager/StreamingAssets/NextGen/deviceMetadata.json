@@ -1,0 +1,162 @@
+{
+  "COM1": {
+    "Label": "COM1",
+    "Type": 7,
+    "Tags": []
+  },
+  "LHR-0EA896F0": {
+    "Label": "ya",
+    "Type": 3,
+    "Tags": []
+  },
+  "LHB-FA9108A8": {
+    "Label": "adsf",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-071BB9A8": {
+    "Label": "l;ighthouse",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-C0AA30D5": {
+    "Label": "another lighthouse",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-D0584280": {
+    "Label": "lighthousssse",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHR-4B8FCF80": {
+    "Label": "dunno",
+    "Type": 1,
+    "Tags": []
+  },
+  "Leap Motion Left Hand": {
+    "Label": "lefty",
+    "Type": 8,
+    "Tags": []
+  },
+  "Leap Motion Right Hand": {
+    "Label": "righty",
+    "Type": 8,
+    "Tags": []
+  },
+  "COM5": {
+    "Label": "Cereal",
+    "Type": 7,
+    "Tags": []
+  },
+  "LHR-F9308780": {
+    "Label": "Index",
+    "Type": 4,
+    "Tags": []
+  },
+  "LHB-ED208E21": {
+    "Label": "Lamp",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHR-58CBAEC4": {
+    "Label": "Excalibur",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-6E2938BC": {
+    "Label": "Sonic & Knuckles",
+    "Type": 2,
+    "Tags": []
+  },
+  "LHR-92836352": {
+    "Label": "Lightsaber",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-62E43E85": {
+    "Label": "Manny's Head",
+    "Type": 5,
+    "Tags": []
+  },
+  "LHR-652D9162": {
+    "Label": "Manny's Left Hand",
+    "Type": 5,
+    "Tags": []
+  },
+  "LHR-141D678F": {
+    "Label": "Manny's Right Hand",
+    "Type": 5,
+    "Tags": []
+  },
+  "LHR-7854ABC7": {
+    "Label": "Manny's Right Foot",
+    "Type": 5,
+    "Tags": []
+  },
+  "WristcuffV5Board\r": {
+    "Label": "WristcuffV5 Touchpad",
+    "Type": 7,
+    "Tags": []
+  },
+  "LHR-37567F12": {
+    "Label": "WristcuffV6 SteamVR",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-2A47A89A": {
+    "Label": "Wristcuff V5 SteamVR",
+    "Type": 2,
+    "Tags": []
+  },
+  "WristcuffArduBoard\r": {
+    "Label": "Wristcuff V5 Serial",
+    "Type": 7,
+    "Tags": []
+  },
+  "LHR-BDE37E4F": {
+    "Label": "Magick Goggles",
+    "Type": 3,
+    "Tags": []
+  },
+  "LHR-AD4505F9": {
+    "Label": "GooberWand",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-920CC7E2": {
+    "Label": "Wanda",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHB-7C4C49D2": {
+    "Label": "Lamphouse",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHR-A730A1D4": {
+    "Label": "CONT-1(1)",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-8832082B": {
+    "Label": "MultiRAE",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-068EC500": {
+    "Label": "Jigsaw Flashlight",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-8523F705": {
+    "Label": "MT",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-F5D5BF5B": {
+    "Label": "Vive Headset",
+    "Type": 3,
+    "Tags": []
+  }
+}
