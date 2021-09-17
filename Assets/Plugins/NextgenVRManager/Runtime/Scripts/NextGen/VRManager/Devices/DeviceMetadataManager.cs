@@ -13,7 +13,7 @@ namespace NextGen.VrManager.Devices
     /// </summary>
     public static class DeviceMetadataManager
     {
-        private static string basePath { get { return $"{Application.dataPath}/StreamingAssets/NextGen"; } }
+        private static string basePath { get { return $"{Application.streamingAssetsPath}/NextGen"; } }
         private static readonly string fileName = "deviceMetadata.json";
         private static string filePath { get { return $"{basePath}/{fileName}"; } }
 
