@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class StaticHand : Tool
 {
-    [SerializeField] private Handedness handedness = Handedness.None;
+    [SerializeField] public Handedness handedness = Handedness.None;
 
     private SkinnedMeshRenderer[] allSkinnedMeshRenderers;
     [SerializeField] private SkinnedMeshRenderer meshRenderer;
@@ -24,9 +24,41 @@ public class StaticHand : Tool
     private Pivot pivot;
 
     private float gripState = 0;
+    private float thumbState = 0;
     private float timeToFullyGrip = 0.25f;
 
+    private Vector3 lastPos;
+    private Quaternion lastRot;
+
+    public bool IsGripping { get { return gripState == 1; } }
+
+    [SerializeField] private float grabRadius = 0.125f;
+    [SerializeField] private StaticHandGrabbable grabTarget;
+
     [SerializeField] private bool alwaysGrip = false;
+
+    public List<StaticHandGrabbableDropZone> allDropZones;
+    private bool DropZoneValid
+    {
+        get
+        {
+            if (allDropZones.Count == 0)
+                return true;
+            else
+            {
+                bool inDropZone = false;
+
+                foreach(Collider col in Physics.OverlapSphere(transform.position, 0.01f))
+                {
+                    StaticHandGrabbableDropZone zone = col.GetComponent<StaticHandGrabbableDropZone>();
+                    if (zone != null)
+                        inDropZone = true;
+                }
+
+                return inDropZone;
+            }
+        }
+    }
 
     /*
     private float desiredRootWeight;
@@ -47,8 +79,6 @@ public class StaticHand : Tool
     [SerializeField] private LayerMask surfaceDetectionLayers;
     [SerializeField] private LayerMask snapPointDetectionLayers;
     */
-
-    private bool lostTracking;
 
     private void Awake()
     {
@@ -74,20 +104,21 @@ public class StaticHand : Tool
 
         //make invisible
         allSkinnedMeshRenderers.ToList().ForEach(smr => { smr.enabled = false; });
+
+        allDropZones = FindObjectsOfType<StaticHandGrabbableDropZone>().ToList();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (Devices.ContainsKey("Controller"))
         {
+            //Set handedness.
             handedness = Devices["Controller"].Characteristics.HasFlag(DeviceCharacteristics.Left) ? Handedness.Left : Handedness.Right;
-
             if (handedness == Handedness.None)
             {
                 return;
             }
-
-            if (handedness == Handedness.Left)
+            else if (handedness == Handedness.Left)
             {
                 meshRenderer.enabled = true;
                 pivot.transform.localScale = new Vector3(1, 1, 1);
@@ -95,44 +126,84 @@ public class StaticHand : Tool
             else if (handedness == Handedness.Right)
             {
                 meshRenderer.enabled = true;
-                pivot.transform.localScale = new Vector3(-1, 1, 1);
+                pivot.transform.localScale = new Vector3(1, 1, -1);
             }
 
+            //Get input.
             Devices["Controller"].TryGetFeatureValue(CommonDeviceFeatures.devicePosition, out Vector3 outPos);
             Devices["Controller"].TryGetFeatureValue(CommonDeviceFeatures.deviceRotation, out Quaternion outRot);
             Devices["Controller"].TryGetFeatureValue(CommonDeviceFeatures.gripButton, out bool outGrip);
+            Devices["Controller"].TryGetFeatureValue(CommonDeviceFeatures.primary2DAxisTouch, out bool outThumb);
 
             transform.position = outPos;
             transform.rotation = outRot;
 
             gripState += Time.deltaTime * (1 / timeToFullyGrip) * (outGrip || alwaysGrip ? 1 : -1);
-            if (gripState > 1)
-                gripState = 1;
-            if (gripState < 0)
-                gripState = 0;
+            gripState = Mathf.Clamp01(gripState);
 
-            //Set the target positions for the IK rig based on whether or not the hand is gripping or not.
-            for(int i = 0; i < 5; i++)
+            thumbState += Time.deltaTime * (1 / timeToFullyGrip) * (outThumb ? 1 : -1);
+            thumbState = Mathf.Clamp01(thumbState);
+
+            //Grab things.
+            if (grabTarget == null && gripState == 1 && DropZoneValid)
             {
-                Transform target = ikTargetPositions.GetChild(i);
-                Transform loose = looseTargetPositions.GetChild(i);
-                Transform gripped = grippedTargetPositions.GetChild(i);
-
-                Vector3 targetPos = Vector3.Lerp(loose.position, gripped.position, gripState);
-                Quaternion targetRot = Quaternion.Lerp(loose.rotation, gripped.rotation, gripState);
-
-                target.SetPositionAndRotation(targetPos, targetRot);
+                foreach (Collider collider in Physics.OverlapSphere(transform.position, grabRadius))
+                {
+                    StaticHandGrabbable grabbable = collider.GetComponent<StaticHandGrabbable>();
+                    if (grabbable)
+                    {
+                        if(!grabbable.isBeingGrabbed)
+                        {
+                            Grab(grabbable);
+                            break;
+                        }
+                    }
+                }
+            }
+            //Drop things.
+            else if(grabTarget != null & gripState != 1 && DropZoneValid)
+            {
+                if(!grabTarget.sticksToHandAfterBeingGrabbed)
+                    Drop();
             }
 
-            //handTargets.SetPositionsAndRotations(handTargets, lostTracking);
 
-            //LerpFingerWeights(ikHand);
-            lostTracking = false;
+
+            //Set the target positions for the IK rig based on whether or not the hand is gripping or not, and whether or not it's grabbing something.
+            if(grabTarget == null)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Transform target = ikTargetPositions.GetChild(i);
+                    Transform loose = looseTargetPositions.GetChild(i);
+                    Transform gripped = grippedTargetPositions.GetChild(i);
+
+                    Vector3 targetPos = Vector3.Lerp(loose.position, gripped.position, i != 4 ? gripState : thumbState);
+                    Quaternion targetRot = Quaternion.Lerp(loose.rotation, gripped.rotation, i != 4 ? gripState : thumbState);
+
+                    target.SetPositionAndRotation(targetPos, targetRot);
+                }
+            }
+            else
+            {
+                grabTarget.transform.SetPositionAndRotation(transform.position, transform.rotation);
+
+                for (int i = 0; i < 5; i++)
+                {
+                    Transform target = ikTargetPositions.GetChild(i);
+                    Transform grab = handedness == Handedness.Left ? grabTarget.leftHandIkTargets.GetChild(i) : grabTarget.rightHandIkTargets.GetChild(i);
+
+                    target.SetPositionAndRotation(grab.position, grab.rotation);
+                }
+            }
         }
         else
         {
             meshRenderer.enabled = false;
         }
+
+        lastPos = transform.position;
+        lastRot = transform.rotation;
     }
 
     public enum Handedness
@@ -140,6 +211,18 @@ public class StaticHand : Tool
         None,
         Left,
         Right
+    }
+
+    private void Grab(StaticHandGrabbable grabTarget)
+    {
+        this.grabTarget = grabTarget;
+        grabTarget.BeGrabbed(this);
+    }
+
+    private void Drop()
+    {
+        grabTarget.BeDropped(lastPos, transform.position);
+        grabTarget = null;
     }
 
     /*

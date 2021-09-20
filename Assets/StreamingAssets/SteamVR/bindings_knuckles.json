@@ -1,7 +1,7 @@
 {
    "action_manifest_version" : 0,
    "alias_info" : {},
-   "app_key" : "application.generated.unity.nextgenvrmanager.exe",
+   "app_key" : "application.generated.unity.fsvr_userstudies.exe",
    "bindings" : {
       "/actions/buggy" : {
          "sources" : [
@@ -283,11 +283,24 @@
          ]
       },
       "/actions/ngvrmanager" : {
+         "haptics" : [
+            {
+               "output" : "/actions/ngvrmanager/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/ngvrmanager/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
          "sources" : [
             {
                "inputs" : {
+                  "position" : {
+                     "output" : "/actions/ngvrmanager/in/touchpadtouchpoint"
+                  },
                   "touch" : {
-                     "output" : "/actions/ngvrmanager/in/grip"
+                     "output" : "/actions/ngvrmanager/in/touchpadtouching"
                   }
                },
                "mode" : "trackpad",
@@ -295,8 +308,11 @@
             },
             {
                "inputs" : {
+                  "position" : {
+                     "output" : "/actions/ngvrmanager/in/touchpadtouchpoint"
+                  },
                   "touch" : {
-                     "output" : "/actions/ngvrmanager/in/grip"
+                     "output" : "/actions/ngvrmanager/in/touchpadtouching"
                   }
                },
                "mode" : "trackpad",
@@ -305,7 +321,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/ngvrmanager/in/menuclick"
+                     "output" : "/actions/ngvrmanager/in/secondarybutton"
                   }
                },
                "mode" : "button",
@@ -314,7 +330,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/ngvrmanager/in/menuclick"
+                     "output" : "/actions/ngvrmanager/in/secondarybutton"
                   }
                },
                "mode" : "button",
@@ -324,6 +340,9 @@
                "inputs" : {
                   "click" : {
                      "output" : "/actions/ngvrmanager/in/triggerclick"
+                  },
+                  "pull" : {
+                     "output" : "/actions/ngvrmanager/in/triggerpull"
                   }
                },
                "mode" : "trigger",
@@ -333,10 +352,91 @@
                "inputs" : {
                   "click" : {
                      "output" : "/actions/ngvrmanager/in/triggerclick"
+                  },
+                  "pull" : {
+                     "output" : "/actions/ngvrmanager/in/triggerpull"
                   }
                },
                "mode" : "trigger",
                "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/ngvrmanager/in/primarybutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/ngvrmanager/in/primarybutton"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/ngvrmanager/in/menuclick"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/system"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/ngvrmanager/in/menuclick"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/system"
+            },
+            {
+               "inputs" : {
+                  "grab" : {
+                     "output" : "/actions/ngvrmanager/in/grip"
+                  }
+               },
+               "mode" : "grab",
+               "path" : "/user/hand/left/input/grip"
+            },
+            {
+               "inputs" : {
+                  "grab" : {
+                     "output" : "/actions/ngvrmanager/in/grip"
+                  }
+               },
+               "mode" : "grab",
+               "path" : "/user/hand/right/input/grip"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/ngvrmanager/in/secondarytouchpadtouchpoint"
+                  },
+                  "touch" : {
+                     "output" : "/actions/ngvrmanager/in/secondarytouchpadtouching"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/left/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/ngvrmanager/in/secondarytouchpadtouchpoint"
+                  },
+                  "touch" : {
+                     "output" : "/actions/ngvrmanager/in/secondarytouchpadtouching"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/right/input/thumbstick"
             }
          ]
       },
@@ -384,7 +484,7 @@
    "category" : "steamvr_input",
    "controller_type" : "knuckles",
    "description" : "",
-   "name" : "Shared binding from null",
+   "name" : "Saved FSVR_UserStudies [Testing] configuration for Index Controller",
    "options" : {},
    "simulated_actions" : []
 }

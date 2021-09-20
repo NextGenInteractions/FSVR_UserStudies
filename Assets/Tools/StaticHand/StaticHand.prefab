@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logInputToMetricLog: 0
+  ignorePersistence: 0
   persistenceUid: 
   handedness: 0
   meshRenderer: {fileID: 4966715556587203127}
@@ -419,7 +420,10 @@ MonoBehaviour:
   ikTargetPositions: {fileID: 4513324161386597882}
   looseTargetPositions: {fileID: 976128964722406262}
   grippedTargetPositions: {fileID: 2337445370476084788}
+  grabRadius: 0.125
+  grabTarget: {fileID: 0}
   alwaysGrip: 0
+  allDropZones: []
 --- !u!1 &841626165889447656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,7 +2462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7789395656459861185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.003, y: 0.084, z: -0}
+  m_LocalPosition: {x: -0.002, y: 0.0822, z: -0.00828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2337445370476084788}
@@ -2696,14 +2700,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8819848839217624127}
-  m_LocalRotation: {x: 0.000000030908613, y: 0.7071068, z: 0.7071068, w: -0.000000030908613}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: -0.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1770512145655230058}
   m_Father: {fileID: 1568421764471604178}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.405, y: -90, z: -90}
 --- !u!1773428102 &8489641953670332969
 ParentConstraint:
   m_ObjectHideFlags: 0
@@ -2785,7 +2789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: {x: 1, y: 0, z: 0}
   defaultLocalRotation: {x: -0.07221604, y: 0.06562602, z: 0.00090079673, w: 0.9952273}
-  twistLimit: 0
+  twistLimit: 12
   spline:
     serializedVersion: 2
     m_Curve:
