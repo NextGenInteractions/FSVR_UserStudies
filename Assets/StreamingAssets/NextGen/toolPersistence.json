@@ -4,5 +4,17 @@
       "DeviceUid": "LHR-F9308780",
       "DeviceDisplayName": "test"
     }
+  },
+  "StaticHand B": {
+    "Controller": {
+      "DeviceUid": "LHR-92836352",
+      "DeviceDisplayName": "Lightsaber"
+    }
+  },
+  "StaticHand A": {
+    "Controller": {
+      "DeviceUid": "LHR-58CBAEC4",
+      "DeviceDisplayName": "Excalibur"
+    }
   }
 }

@@ -428,9 +428,6 @@
             },
             {
                "inputs" : {
-                  "position" : {
-                     "output" : "/actions/ngvrmanager/in/secondarytouchpadtouchpoint"
-                  },
                   "touch" : {
                      "output" : "/actions/ngvrmanager/in/secondarytouchpadtouching"
                   }

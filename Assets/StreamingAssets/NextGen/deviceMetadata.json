@@ -23,5 +23,40 @@
     "Label": "4",
     "Type": 0,
     "Tags": []
+  },
+  "LHR-BDE37E4F": {
+    "Label": "Headset",
+    "Type": 3,
+    "Tags": []
+  },
+  "LHB-7C4C49D2": {
+    "Label": "Lamp1",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHR-1B45E3AD": {
+    "Label": "Sonic &",
+    "Type": 2,
+    "Tags": []
+  },
+  "LHR-6E2938BC": {
+    "Label": "Tails &",
+    "Type": 2,
+    "Tags": []
+  },
+  "LHB-04658131": {
+    "Label": "Lamp2",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHR-58CBAEC4": {
+    "Label": "Excalibur",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-92836352": {
+    "Label": "Lightsaber",
+    "Type": 1,
+    "Tags": []
   }
 }
