@@ -5,7 +5,7 @@ using UnityEngine.Animations;
 
 public class SmartCamera : MonoBehaviour
 {
-    private static SmartCamera Instance;
+    public static SmartCamera Instance;
 
     public Transform focusTarget;
     public float focusTargetDistance = 5;

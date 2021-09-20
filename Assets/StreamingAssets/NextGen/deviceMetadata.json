@@ -1,0 +1,27 @@
+{
+  "LHR-F9308780": {
+    "Label": "test",
+    "Type": 3,
+    "Tags": []
+  },
+  "LHB-071BB9A8": {
+    "Label": "1",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-C0AA30D5": {
+    "Label": "2",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-D0584280": {
+    "Label": "3",
+    "Type": 0,
+    "Tags": []
+  },
+  "LHB-345C3B5D": {
+    "Label": "4",
+    "Type": 0,
+    "Tags": []
+  }
+}

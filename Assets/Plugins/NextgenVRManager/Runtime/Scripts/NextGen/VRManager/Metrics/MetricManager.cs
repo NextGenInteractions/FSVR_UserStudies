@@ -32,9 +32,9 @@ public class MetricManager : MonoBehaviour
             sessionDuration += Time.deltaTime;
             lapDuration += Time.deltaTime;
 
-            foreach(Timer timer in timers.Values)
+            foreach (Timer timer in timers.Values)
             {
-                if(timer.active)
+                if (timer.active)
                     timer.time += Time.deltaTime;
             }
         }
@@ -42,7 +42,7 @@ public class MetricManager : MonoBehaviour
 
     public static void StartLive(string _sessionName)
     {
-        if(!isLive)
+        if (!isLive)
         {
             sessionName = _sessionName;
             isLive = true;
@@ -59,7 +59,7 @@ public class MetricManager : MonoBehaviour
 
     public static void StopLive()
     {
-        if(isLive)
+        if (isLive)
         {
             LogEvent("Session ended.");
 
@@ -148,7 +148,7 @@ public class MetricManager : MonoBehaviour
         if (tallies.ContainsKey(_tallyName))
         {
             tallies[_tallyName].count++;
-            LogEvent($"Tally '{_tallyName}' has been incremented to a value of {tallies[_tallyName].count}.","Tally");
+            LogEvent($"Tally '{_tallyName}' has been incremented to a value of {tallies[_tallyName].count}.", "Tally");
             if (_optionalNote != "")
                 LogEvent(_optionalNote, "Tally");
         }
@@ -185,7 +185,7 @@ public class MetricManager : MonoBehaviour
     public static void LogTimerTime(string _timerName)
     {
         if (timers.ContainsKey(_timerName))
-            LogEvent($"Timer '{_timerName}' logged with time of {TimeToMSD(timers[_timerName].time)}.","Timer");
+            LogEvent($"Timer '{_timerName}' logged with time of {TimeToMSD(timers[_timerName].time)}.", "Timer");
         else
             Debug.LogWarning($"No timer exists with the name {_timerName} to be logged.");
     }

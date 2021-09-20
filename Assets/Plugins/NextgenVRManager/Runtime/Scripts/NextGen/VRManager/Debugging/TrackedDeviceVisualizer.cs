@@ -47,7 +47,7 @@ namespace NextGen.VrManager.DebugTools
             SimpleDeviceVisualization trackedObject = null;
             var matchingDeviceTypePrefab = deviceTypePrefabs.FirstOrDefault((deviceTypePrefab) => { return deviceTypePrefab.type == device.Metadata?.Type; });
 
-            if(matchingDeviceTypePrefab.prefab != null)
+            if (matchingDeviceTypePrefab.prefab != null)
                 trackedObject = Instantiate(matchingDeviceTypePrefab.prefab, transform);
 
             if (trackedObject)
@@ -63,7 +63,7 @@ namespace NextGen.VrManager.DebugTools
             if (obj.layer == 0)
                 obj.layer = 7;
 
-            for(int i = 0; i < obj.transform.childCount; i++)
+            for (int i = 0; i < obj.transform.childCount; i++)
             {
                 SetLayerRecursively(obj.transform.GetChild(i).gameObject, layer);
             }
@@ -73,7 +73,7 @@ namespace NextGen.VrManager.DebugTools
         {
             var device = DeviceManager.GetDeviceByUID(serialNumber);
 
-            if(device != null)
+            if (device != null)
             {
                 OnDeviceRemoved(device);
                 OnDeviceAdded(device);
@@ -82,7 +82,7 @@ namespace NextGen.VrManager.DebugTools
 
         private void OnDeviceRemoved(Device device)
         {
-            if(deviceVisualizations.ContainsKey(device))
+            if (deviceVisualizations.ContainsKey(device))
             {
                 Destroy(deviceVisualizations[device].gameObject);
 

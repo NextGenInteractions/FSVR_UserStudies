@@ -148,5 +148,15 @@
     "Label": "Jigsaw Flashlight",
     "Type": 1,
     "Tags": []
+  },
+  "LHR-8523F705": {
+    "Label": "MT",
+    "Type": 1,
+    "Tags": []
+  },
+  "LHR-F5D5BF5B": {
+    "Label": "Vive Headset",
+    "Type": 3,
+    "Tags": []
   }
 }
