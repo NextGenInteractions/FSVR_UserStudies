@@ -13,7 +13,7 @@ namespace NextGen.VrManager.ToolManagement
 
         public static Action<Tool> ToolAdded, ToolRemoved;
 
-        private static string persistenceBasePath { get { return $"{Application.dataPath}/StreamingAssets/NextGen"; } }
+        private static string persistenceBasePath { get { return $"{Application.streamingAssetsPath}/NextGen"; } }
 
         private static readonly string persistenceFileName = "toolPersistence.json";
         private static string persistenceFilePath { get { return $"{persistenceBasePath}/{persistenceFileName}"; } }

@@ -1,0 +1,14 @@
+{
+  "settingsMode": 0,
+  "settingsConfiguration": {
+    "overlayVisible": true,
+    "visualizeDevices": true,
+    "visualizeFloorGrid": true,
+    "deviceManagerWindowVisible": true,
+    "toolManagerWindowVisible": false,
+    "pivotManagerWindowVisible": false,
+    "metricManagerWindowVisible": false,
+    "nextgenInspectorWindowVisible": true,
+    "defaultCameraFocusTarget": null
+  }
+}
