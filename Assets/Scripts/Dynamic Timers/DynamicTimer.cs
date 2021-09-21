@@ -12,13 +12,15 @@ public class DynamicTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!hasStarted)
+        if(!hasStarted && MetricManager.isLive)
         {
-            if(MetricManager.isLive)
-            {
-                MetricManager.CreateTimer(TimerName, false);
-                hasStarted = true;
-            }
+            MetricManager.CreateTimer(TimerName, false);
+            hasStarted = true;
+        }
+
+        if(hasStarted && !MetricManager.isLive)
+        {
+            hasStarted = false;
         }
     }
 
