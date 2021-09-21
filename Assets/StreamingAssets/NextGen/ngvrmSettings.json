@@ -7,8 +7,8 @@
     "deviceManagerWindowVisible": true,
     "toolManagerWindowVisible": true,
     "pivotManagerWindowVisible": false,
-    "metricManagerWindowVisible": false,
+    "metricManagerWindowVisible": true,
     "nextgenInspectorWindowVisible": true,
-    "defaultCameraFocusTarget": null
+    "defaultCameraFocusTarget": "PlayerLogic"
   }
 }
