@@ -19,6 +19,8 @@ public class MetricManager : MonoBehaviour
 
     public static Action<Tally> onTallyCreated;
     public static Action<Timer> onTimerCreated;
+
+    public static Action onSessionStopped;
     private void OnDisable()
     {
         if (isLive)
@@ -68,6 +70,11 @@ public class MetricManager : MonoBehaviour
                 WriteLine($"Tally '{tally.name}': {tally.count}");
             foreach (Timer timer in timers.Values)
                 WriteLine($"Timer '{timer.name}': {TimeToMSD(timer.time)}");
+
+            tallies.Clear();
+            timers.Clear();
+
+            onSessionStopped.Invoke();
 
             isLive = false;
             writer.Close();
@@ -134,13 +141,16 @@ public class MetricManager : MonoBehaviour
 
     public static void CreateTally(string _tallyName, int _startingCount)
     {
-        if (!tallies.ContainsKey(_tallyName))
+        if(isLive)
         {
-            tallies.Add(_tallyName, new Tally(_tallyName, _startingCount));
-            onTallyCreated.Invoke(tallies[_tallyName]);
+            if (!tallies.ContainsKey(_tallyName))
+            {
+                tallies.Add(_tallyName, new Tally(_tallyName, _startingCount));
+                onTallyCreated.Invoke(tallies[_tallyName]);
+            }
+            else
+                Debug.LogWarning($"A tally already exists with the name '{_tallyName}'.");
         }
-        else
-            Debug.LogWarning($"A tally already exists with the name '{_tallyName}'.");
     }
 
     public static void IncrementTally(string _tallyName, string _optionalNote = "")
@@ -171,15 +181,18 @@ public class MetricManager : MonoBehaviour
 
     public static void CreateTimer(string _timerName, bool _startCountingImmediately = true)
     {
-        if (!timers.ContainsKey(_timerName))
+        if(isLive)
         {
-            timers.Add(_timerName, new Timer(_timerName, _startCountingImmediately));
-            onTimerCreated.Invoke(timers[_timerName]);
-            string andStarted = _startCountingImmediately ? " and started" : "";
-            LogEvent($"Timer created{andStarted}: {_timerName}");
+            if (!timers.ContainsKey(_timerName))
+            {
+                timers.Add(_timerName, new Timer(_timerName, _startCountingImmediately));
+                onTimerCreated.Invoke(timers[_timerName]);
+                string andStarted = _startCountingImmediately ? " and started" : "";
+                LogEvent($"Timer created{andStarted}: {_timerName}");
+            }
+            else
+                Debug.LogWarning($"A timer already exists with the name '{_timerName}'.");
         }
-        else
-            Debug.LogWarning($"A timer already exists with the name '{_timerName}'.");
     }
 
     public static void LogTimerTime(string _timerName)

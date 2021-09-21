@@ -42,6 +42,14 @@ public class MetricManagerUi : MonoBehaviour
     {
         MetricManager.onTallyCreated += CreateTallyWidget;
         MetricManager.onTimerCreated += CreateTimerWidget;
+        MetricManager.onSessionStopped += ClearWidgets;
+    }
+
+    private void OnDisable()
+    {
+        MetricManager.onTallyCreated -= CreateTallyWidget;
+        MetricManager.onTimerCreated -= CreateTimerWidget;
+        MetricManager.onSessionStopped -= ClearWidgets;
     }
 
     // Start is called before the first frame update
@@ -125,5 +133,13 @@ public class MetricManagerUi : MonoBehaviour
     void CreateTimerWidget(MetricManager.Timer timer)
     {
         Instantiate(timerWidgetPrefab, widgetMount).GetComponent<TimerWidget>().Init(timer);
+    }
+
+    void ClearWidgets()
+    {
+        for(int i = 0; i < widgetMount.childCount; i++)
+        {
+            Destroy(widgetMount.GetChild(i).gameObject);
+        }
     }
 }
