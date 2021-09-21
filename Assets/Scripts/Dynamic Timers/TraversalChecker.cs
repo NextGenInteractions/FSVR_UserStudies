@@ -29,10 +29,13 @@ public class TraversalChecker : MonoBehaviour
                         (destination.size.x * destination.transform.lossyScale.x) / 2,
                         (destination.size.y * destination.transform.lossyScale.y) / 2,
                         (destination.size.z * destination.transform.lossyScale.z) / 2
-                    )))
+                    ),
+                    destination.transform.rotation))
                 {
-                    if (col.tag == "PlayerTag")
+                    if (col.CompareTag("PlayerTag"))
+                    {
                         traversing = false;
+                    }
                 }
             }
 

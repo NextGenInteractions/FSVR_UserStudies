@@ -25,7 +25,8 @@ public class PlayerChecker : MonoBehaviour
                 (areaToCheck.size.x * areaToCheck.transform.lossyScale.x) / 2,
                 (areaToCheck.size.y * areaToCheck.transform.lossyScale.y) / 2,
                 (areaToCheck.size.z * areaToCheck.transform.lossyScale.z) / 2
-            )))
+            ),
+            areaToCheck.transform.rotation))
         {
             if (col.tag == "PlayerTag")
                 playerPresent = true;
