@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Std_Nails
+    second: {fileID: 2100000, guid: ad364f52cef54d94c9873e968759a162, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Std_Skin_Arm
     second: {fileID: 2100000, guid: 66c54e2b9798433428900b8bda9174f0, type: 2}
   materials:
