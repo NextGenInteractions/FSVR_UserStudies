@@ -30,6 +30,8 @@ public class StaticHand : Tool
     private Vector3 lastPos;
     private Quaternion lastRot;
 
+    [HideInInspector] public bool setInvisible = false;
+
     public bool IsGripping { get { return gripState == 1; } }
 
     [SerializeField] private float grabRadius = 0.125f;
@@ -120,12 +122,12 @@ public class StaticHand : Tool
             }
             else if (handedness == Handedness.Left)
             {
-                meshRenderer.enabled = true;
+                meshRenderer.enabled = !setInvisible;
                 pivot.transform.localScale = new Vector3(1, 1, 1);
             }
             else if (handedness == Handedness.Right)
             {
-                meshRenderer.enabled = true;
+                meshRenderer.enabled = !setInvisible;
                 pivot.transform.localScale = new Vector3(1, 1, -1);
             }
 

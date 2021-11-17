@@ -157,7 +157,11 @@ namespace NextGen.Tools
                     //ikHand.transform.SetPositionAndRotation(handTargets.root.position, handTargets.root.rotation);
 
                     riggedHand.SetLeapHand(leapHand);
-                    riggedHand.UpdateHand();
+
+                    if(!snapPoint)
+                    {
+                        riggedHand.UpdateHand();
+                    }
 
                     if (snapPoint)
                     {
@@ -170,7 +174,7 @@ namespace NextGen.Tools
                         float distanceToCenter = Math.Abs(Vector3.Distance(palmPosition, snapPoint.transform.position));
                         float distanceToInner = Mathf.Clamp(distanceToCenter - innerRadius, 0, float.MaxValue);
                         float innerOuterDiff = Math.Abs(outerRadius - innerRadius);
-                        float weightToSet = Mathf.Clamp(1 - (distanceToInner / innerOuterDiff), 0, 1);
+                        float weightToSet = 1;
 
                         snapPoint.lastDistToCenter = distanceToCenter;
                         snapPoint.lastDistToInner = distanceToInner;
@@ -223,7 +227,7 @@ namespace NextGen.Tools
                                 float distanceToCenter = Math.Abs(Vector3.Distance(position, snapFingerZone.transform.position));
                                 float distanceToInner = Mathf.Clamp(distanceToCenter - snapFingerZone.innerCollider.radius, 0, float.MaxValue);
                                 float innerOuterDiff = Math.Abs(snapFingerZone.outerCollider.radius - snapFingerZone.innerCollider.radius);
-                                float weightToSet = Mathf.Clamp(1 - (distanceToInner / innerOuterDiff), 0, 1);
+                                float weightToSet = 1;
 
                                 desiredWeights[handFinger] = weightToSet;
                                 fingerTarget.SetPositionAndRotation(snapFingerZone.fingerTarget);
@@ -451,7 +455,7 @@ namespace NextGen.Tools
             public void UpdateTargetPositionAndRotation(float fingerTargetPositionSmoothTime)
             {
                 target.position = Vector3.SmoothDamp(target.position, desiredPosition, ref currentVelocity, fingerTargetPositionSmoothTime);
-                target.rotation = SmoothDamp(target.rotation, desiredRotation, ref derivRot, .1f);
+                target.rotation = SmoothDamp(target.rotation, desiredRotation, ref derivRot, fingerTargetPositionSmoothTime);
             }
         }
 

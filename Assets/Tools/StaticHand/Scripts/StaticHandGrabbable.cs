@@ -50,6 +50,8 @@ public class StaticHandGrabbable : MonoBehaviour
     {
         handGrabbingMe = staticHand;
 
+        //staticHand.setInvisible = true;
+
         pivot.transform.localPosition = staticHand.handedness == StaticHand.Handedness.Left ? leftHandOffset.localPosition : rightHandOffset.localPosition;
         pivot.transform.localRotation = staticHand.handedness == StaticHand.Handedness.Left ? leftHandOffset.localRotation : rightHandOffset.localRotation;
         isBeingGrabbed = true;

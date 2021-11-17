@@ -412,7 +412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logInputToMetricLog: 0
-  ignorePersistence: 0
   persistenceUid: 
   handedness: 0
   meshRenderer: {fileID: 4966715556587203127}
@@ -420,6 +419,7 @@ MonoBehaviour:
   ikTargetPositions: {fileID: 4513324161386597882}
   looseTargetPositions: {fileID: 976128964722406262}
   grippedTargetPositions: {fileID: 2337445370476084788}
+  setInvisible: 0
   grabRadius: 0.125
   grabTarget: {fileID: 0}
   alwaysGrip: 0
